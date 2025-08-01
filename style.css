@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', cursive;
+  background: #ffd6e0;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.container {
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.photo {
+  width: 250px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+button {
+  background: #ff69b4;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+.cta {
+  margin-top: 30px;
+  font-size: 1.3em;
+  color: #d63384;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 500px;
+  color: #444;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Confetti */
+#confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+/* Response Buttons */
+.response-buttons {
+  margin-top: 20px;
+}
+
+.response-buttons button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.response-buttons button:hover {
+  background-color: #ff1493;
+}
+
+#responseMessage {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #d63384;
+}
+
+/* Floating Flowers */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('https://i.imgur.com/HUfZvcA.png');
+  background-repeat: repeat;
+  background-size: 150px;
+  animation: floatFlowers 60s linear infinite;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+@keyframes floatFlowers {
+  from { background-position: 0 0; }
+  to { background-position: 0 1000px; }
+}
